@@ -25,6 +25,13 @@
                 bottom: 15px;
                 border-radius: 50%;
             }
+             .gotocart {
+                position: fixed;
+                right: 25px;
+                bottom: 15px;
+                background-color: red;
+                border-radius: 50%;
+            }
         </style>
     </head>
     <body>
@@ -65,6 +72,9 @@
         <div class="row" style="text-align: center;">
             <div class="col-sm-6"><a href="../../ApplicationLayer/managePayment/paymentOrderedList.php?custID=<?=$_SESSION['custID']?>" style="color: black; text-decoration: none;"><h4>NOTIFICATION</h4></a></div>
             <div class="col-sm-6"><a href="../../ApplicationLayer/managePayment/paymentOrderedList.php?custID=<?=$_SESSION['custID']?>" style="color: black; text-decoration: none;"><h4>MY ORDERS</h4></a></div>
+        </div>
+        <div class="gotocart">
+            <a href="./customerViewCart.php?custID=1"><img src="Image/gotocarticon.png" alt="gotocart" width="70px" height="70px"></a>
         </div>
     </body>
 </html>
