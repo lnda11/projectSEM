@@ -6,6 +6,7 @@
     $user = new manageUserProfileController();
     $data = $user->viewCust($custID); 
 
+
     if(isset($_POST['update'])){
         $user->updateCust();
     }
@@ -36,46 +37,50 @@
             <a href="../manageOrder/customerHomePage.php?custID=<?=$_SESSION['custID']?>"><img src="Image/largerlogo.png" width="110px" height="70px"><label style="font-size: 100%; padding-right: 5px;">Homepage</label></a>
             <div class="topnav-right">
                 <a href="./customerProfile.php?custID=<?=$_SESSION['custID']?>"><i class="fa fa-user" aria-hidden="true" style="font-size: 50px; padding-right: 5px; padding-left: 5px; padding-top: 22%; padding-bottom: 22%;"></i></a>
+					<body style="background-color:powderblue;">
             </div>  
         </div>
         <center>
-        <h3 style="margin-left: 1em; margin-top: 1em;text-decoration: underline;">Customer Profile</h3>
-        <div style="margin-top: 50px; margin-left: 1em;">
+        <h3 style="margin-left: 1em; margin-top: 1em;"><b>CUSTOMER PROFILE</b></h3>
+        <div style="margin-top: 30px; margin-left: 1em;">
             <form action="" method="POST">
                 <?php foreach($data as $row) { 
                     $_SESSION['custID']=$row['custID'];
                 ?>
                 <table>
                     <tr>
-                        <td>Username:&emsp;</td>
-                        <td><input type="text" name="custusername" value="<?=$row['custusername']?>" readonly></td>
+                        <td><b>Username&emsp;</b></td>
+                        <td><b><input type="text" name="custusername" value="<?=$row['custusername']?>" readonly></b></td>
                     </tr>
                     <tr>
-                        <td>Phone Number:&emsp;&emsp;</td>
-                        <td><input type="text" name="custhpnumber" value="<?=$row['custhpnumber']?>" required></td>
+                        <td><b>Phone Number&emsp;&emsp;</b></td>
+                        <td><b><input type="text" name="custhpnumber" value="<?=$row['custhpnumber']?>" required></b></td>
                     </tr>
                     <tr>
-                        <td>Email:</td>
-                        <td><input type="text" name="custemail" value="<?=$row['custemail']?>" required></td>
+                        <td><b>Email</b></td>
+                        <td><b><input type="text" name="custemail" value="<?=$row['custemail']?>" required></b></td>
                     </tr>
                     <tr>
-                        <td>Delivery Line 1:</td>
-                        <td><input type="text" name="custaddress1" value="<?=$row['custaddress1']?>" required></td>
+                        <td><b>State</b></td>
+                        <td><b><input type="text" name="custaddress1" value="<?=$row['custaddress1']?>" required></b></td>
                     </tr>
                     <tr>
-                        <td>Delivery Line 2:</td>
-                        <td><input type="text" name="custaddress2" value="<?=$row['custaddress2']?>" required></td>
+                        <td><b>Area</b></td>
+                        <td><b><input type="text" name="custaddress2" value="<?=$row['custaddress2']?>" required></b></td>
                     </tr>
                     <tr>
-                        <td>Delivery Line 3:</td>
-                        <td><input type="text" name="custaddress3" value="<?=$row['custaddress3']?>" required></td>
+                        <td><b>Postal Code</b></td>
+                        <td><b><input type="text" name="custaddress3" value="<?=$row['custaddress3']?>" required></b></td>
                     </tr>
                     <tr>
-                        <td>Delivery Line 4:</td>
-                        <td><input type="text" name="custaddress4" value="<?=$row['custaddress4']?>" required></td>
+                        <td><b>Full Address</b></td>
+                        <td><b><input type="text" name="custaddress4" value="<?=$row['custaddress4']?>" required></b></td>
+                    </tr>
+					<tr>
+						<img src="<?php echo '../manageLoginAndRegister/Image/'.$row["custimage"];?>"  height="150"  width="150">;
                     </tr>
                     <tr>
-                        <td colspan="2" style="text-align: right;">
+                        <td colspan="2" style="text-align: center;">
                         <br>
                             <button type="submit" class="btn btn-danger" name="delete">Delete Profile</button>&emsp;
                             <button type="submit" class="btn btn-primary" name="update">Update Profile</button>
