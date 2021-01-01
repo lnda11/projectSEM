@@ -11,7 +11,7 @@
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <style> 
             p {
-                font-size: 20px;
+                font-size: 40px;
                 text-align: center;
             } 
 
@@ -39,23 +39,24 @@
     </head>
     <body>
         <div class="header">
-            <img src="Image/logo.jpg" alt="Logo" height="250px">
-            <br><label style="font-size: 25px;">Beep Beep</label>
+            <img src="Image/logobaru.png" alt="Logo" height="300px" width="350px">
+            <body style="background-color:powderblue;">
+			<hr style="border: 2px solid #4682BF; width:70%;">
         </div>
 
         <br><br>
-        <p>Please select your user type to <strong>REGISTER</strong>:</p>
+        <p><strong>REGISTER AS</strong></p>
         <br><br><br>
 
         <div class="row">
-            <div class="col-sm-4"><center><a href="./customerRegister.php"><button class="noBtn"><i class='fas fa-user' style="font-size:xxx-large;"></i><br><label style="font-size: large;">Customer</label></button></a></center></div>
+            <div class="col-sm-4"><center><a href="./customerRegister.php"><button class="noBtn"><i class='fas fa-user-plus' style="font-size:xxx-large;"></i><br><label style="font-size: large;">Customer</label></button></a></center></div>
             <div class="col-sm-4"><center><a href="./serviceproviderRegister.php"><button class="noBtn"><i class='fas fa-house-user' style="font-size:xxx-large;"></i><br><label style="font-size: large;">Service Provider</label></button></a></center></div>
             <div class="col-sm-4"><center><a href="./runnerRegister.php" ><button class="noBtn"><i class='fas fa-motorcycle' style="font-size:xxx-large;"></i><br><label style="font-size: large;">Runner</label></button></a></center></div>
         </div>
 
         <br><br>
-        <div style="text-align: center; font-size: medium;">
-            Already have an account? <a class="login" href="./userLogin.php"><u>Login here</u></a>.
+        <div style="text-align: center; font-size: large;">
+            ALREADY HAVE AN ACCOUNT? <a class="login" href="./userLogin.php"><u>LOGIN HERE</u></a>.
         </div>
     </body>
 </html>
