@@ -92,7 +92,7 @@
         <form action="" method="POST">
             <div style="text-align: center;">
                 <br><br>
-                <button name="checkout" class="btn btn-primary"><a href="../managePayment/paymentCheckout.php?custID=<?=$_SESSION['custID']?>" style="text-decoration: none; color: white;">Check Out</a></button>
+                <button name="checkout" class="btn btn-primary"><a href="../managePayment/checkPaymentDetails.php?custID=<?=$_SESSION['custID']?>" style="text-decoration: none; color: white;">Check Out</a></button>
             </div>
         </form> 
         </center>      
