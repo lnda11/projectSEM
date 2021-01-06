@@ -12,9 +12,9 @@ class managePaymentController{
         $service->itemquantity = $_POST['itemquantity'];
         $service->subtotal = $_POST['subtotal'];
         if($service->addPayment()){
-            $message = "Success Insert!";
+            $message = "Order Successfully Placed!";
 		    echo "<script type='text/javascript'>alert('$message');
-		    window.location = '../../ApplicationLayer/managePayment/paymentCheckout.php?custID=".$_SESSION['custID']."';</script>";
+		    window.location = '../../ApplicationLayer/managePayment/paymentMethod.php?custID=".$_SESSION['custID']."';</script>";
         }
     }
 

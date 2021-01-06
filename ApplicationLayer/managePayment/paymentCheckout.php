@@ -57,8 +57,17 @@
         <div class="logout"><a href="../manageLoginAndRegister/userLogin.php">Logout</a></div>
 
         <h3 style="margin-left: 1em; margin-top: 1em; text-decoration: underline;">Payment Checkout</h3>
-        <br><br>
         <div style="margin-left: 1.5em; margin-right: 1.5em;">
+
+            <div class="alert alert-danger text-right" role="alert" style="margin-top: 0px">
+                Please click the <b>CONFIRM</b> button before proceed to payment
+            </div>
+
+            <div class="alert alert-info text-right" role="alert" style="margin-top: 0px">
+                Delivery Fee: Each quantity is charged for <b>RM3</b>
+            </div>
+            
+
 
             <table border="1" class="table">
                 <tr>
@@ -66,7 +75,6 @@
                     <td width="130"><center><b>Unit Price (RM)</b></center></td>
                     <td width="100"><center><b>Quantity</b></center></td>
                     <td width="100"><center><b>Subtotal (RM)</b></center></td>
-                    <td width="100"><center><b>Action</b></center></td>
                 </tr>
     
                     <?php 
@@ -91,13 +99,9 @@
                                 ?>
                                 <input type="hidden" name="totalprice" value="<?=number_format($totalprice,2); ?>">
                             </td>
-                            <td>
-                                <input type="hidden" name="serviceID" value="<?=$row['serviceID']?>">
-                                <button type="submit" name="add"><i class="fa fa-check" aria-hidden="true"></i> &nbsp;Confirm </button>
-                            </td>
                         </tr>
-                    </form>
-                    <?php } ?>
+                   
+                   
                     <tr>
                         <td></td>
                         <td></td>
@@ -110,25 +114,16 @@
                         <td style="font-weight: bold; font-size: larger"><?php echo "TOTAL PRICE";?></td>
                         <td style="font-weight: bold; font-size: larger"><?php echo number_format((float)$totalpricedelivery, 2, '.', ''); ?></td>
                     </tr>
+                 
             </table>
-            <div style="text-align: right;">
-            <label style="color: red">***</label>Click the CONFIRM button(s) before PAY.<br>
-                <label style="color: red">***</label>Delivery Fee: Each quantity is charged for RM3.
-            </div>
-            <div style="text-align: left; background-color: #FFFAFA;">
-                <?php foreach ($addressData as $address) { ?>
-                    <p><b>Delivery Address</b></p>
-                    <p>
-                        <?= $address['custaddress1'] . '<br>' . $address['custaddress2'] . '<br>' . $address['custaddress3'] . '<br>' . $address['custaddress4']?>
-                    </p>
-                    <button type="button" class="btn btn-primary"><a href="../manageUserProfile/customerProfile.php?custID=<?=$_SESSION['custID']?>" style="color: white;">Change Address</a></button>
-                <?php } ?>
-            </div>
-        
-        <br><br>
-        <p>Pay By:</p>
-        <div id="paypal-button-container"></div>
-        </div>
+            <div class="text-right" style="padding-right: 80px;">
+            <input type="hidden" name="serviceID" value="<?=$row['serviceID']?>">
+            <button type="submit" name="add"><i class="fa fa-check" aria-hidden="true"></i> &nbsp;Confirm Order</button>
+        <?php } ?>
+    </div>
+    </form> 
+
+</div>
         <script>
             paypal.Buttons({
                 createOrder: function(data, actions) {
