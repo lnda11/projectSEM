@@ -36,58 +36,62 @@
             <a href="../manageService/serviceProviderServiceView.php?spID=<?=$_SESSION['spID']?>"><img src="Image/largerlogo.png" width="110px" height="70px"><label style="font-size: 100%; padding-right: 5px;">Homepage</label></a>
             <div class="topnav-right">
                 <a href="./serviceProviderProfile.php?spID=<?=$_SESSION['spID']?>"><i class="fa fa-user" aria-hidden="true" style="font-size: 50px; padding-right: 5px; padding-left: 5px; padding-top: 22%; padding-bottom: 22%;"></i></a>
+				<body style="background-color:powderblue;">
             </div>  
         </div>
         <center>
-        <h3 style="margin-left: 1em; margin-top: 1em;text-decoration: underline;">Service Provider Profile</h3>
-        <div style="margin-top: 50px; margin-left: 1em;">
+        <h3 style="margin-left: 1em; margin-top: 1em;"><b>SERVICE PROVIDER PROFILE</b></h3>
+        <div style="margin-top: 15px; margin-left: 1em;">
             <form action="" method="POST">
                 <?php foreach($data as $row) { 
                     $_SESSION['spID']=$row['spID'];
                 ?>
-                <table>
+              <table>
                     <tr>
-                        <td>Username:&emsp;</td>
-                        <td><input type="text" name="spusername" value="<?=$row['spusername']?>" readonly></td>
+                        <td><b>Username&emsp;</b></td>
+                        <td><b><input type="text" name="spusername" value="<?=$row['spusername']?>" readonly></b></td>
                     </tr>
                     <tr>
-                        <td>Phone Number:&emsp;&emsp;</td>
-                        <td><input type="text" name="sphpnumber" value="<?=$row['sphpnumber']?>"required></td>
+                        <td><b>Phone Number&emsp;&emsp;</b></td>
+                        <td><b><input type="text" name="sphpnumber" value="<?=$row['sphpnumber']?>"required></b></td>
                     </tr>
                     <tr>
-                        <td>Email:</td>
-                        <td><input type="text" name="spemail" value="<?=$row['spemail']?>"required></td>
+                        <td><b>Email</b></td>
+                        <td><b><input type="text" name="spemail" value="<?=$row['spemail']?>"required></b></td>
                     </tr>
                     <tr>
-                        <td>Company Name:</td>
-                        <td><input type="text" name="spcompanyname" value="<?=$row['spcompanyname']?>"required></td>
+                        <td><b>Company Name</b></td>
+                        <td><b><input type="text" name="spcompanyname" value="<?=$row['spcompanyname']?>"required></b></td>
                     </tr>
                     <tr>
-                        <td>Address Line 1:</td>
-                        <td><input type="text" name="spaddress1" value="<?=$row['spaddress1']?>"required></td>
+                        <td><b>State</b></td>
+                        <td><b><input type="text" name="spaddress1" value="<?=$row['spaddress1']?>"required></b></td>
                     </tr>
                     <tr>
-                        <td>Address Line 2:</td>
-                        <td><input type="text" name="spaddress2" value="<?=$row['spaddress2']?>"required></td>
+                        <td><b>Area</b></td>
+                        <td><b><input type="text" name="spaddress2" value="<?=$row['spaddress2']?>"required></b></td>
                     </tr>
                     <tr>
-                        <td>Address Line 3:</td>
-                        <td><input type="text" name="spaddress3" value="<?=$row['spaddress3']?>"required></td>
+                        <td><b>Postal Code</b></td>
+                        <td><b><input type="text" name="spaddress3" value="<?=$row['spaddress3']?>"required></b></td>
                     </tr>
                     <tr>
-                        <td>Address Line 4:</td>
-                        <td><input type="text" name="spaddress4" value="<?=$row['spaddress4']?>"required></td>
+                        <td><b>Full Address</b></td>
+                        <td><b><input type="texarea" name="spaddress4" rows="4" cols="50" value="<?=$row['spaddress4']?>"required></b></td>
                     </tr>
                     <tr>
-                        <td>Bank Type:</td>
-                        <td><input type="text" name="spbanktype" value="<?=$row['spbanktype']?>"required></td>
+                        <td><b>Bank Type</b></td>
+                        <td><b><input type="text" name="spbanktype" value="<?=$row['spbanktype']?>"required></b></td>
                     </tr>
                     <tr>
-                        <td>Bank Account Number:</td>
-                        <td><input type="text" name="spbankaccountnumber" value="<?=$row['spbankaccountnumber']?>"required></td>
+                        <td><b>Bank Number</b></td>
+                        <td><b><input type="text" name="spbankaccountnumber" value="<?=$row['spbankaccountnumber']?>"required></b></td>
                     </tr>
+					<tr>
+					<img src="<?php echo '../manageLoginAndRegister/Image/'.$row["spimage"];?>"  height="150"  width="150">;
+					</tr>
                     <tr>
-                        <td colspan="2" style="text-align: right;">
+                        <td colspan="2" style="text-align: center;">
                         <br>
                             <button type="submit" class="btn btn-danger" name="delete">Delete Profile</button>&emsp;
                             <button type="submit" class="btn btn-primary" name="update">Update Profile</button>

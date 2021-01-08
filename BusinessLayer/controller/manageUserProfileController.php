@@ -20,11 +20,11 @@ class manageUserProfileController{
         $user->custaddress3 = $_POST['custaddress3'];
         $user->custaddress4 = $_POST['custaddress4'];
         if($user->updateCustomer()){
-            echo "<script type='text/javascript'>alert('Your profile are success Update!!!');
+            echo "<script type='text/javascript'>alert('SUCCESSFULLY UPDATE CUSTOMER INFORMATION !');
             window.location = './customerProfile.php?custID=".$_SESSION['custID']."';</script>";     
         }
         else
-            echo "<script type='text/javascript'>alert('Your profile are failed Update!!!');
+            echo "<script type='text/javascript'>alert('FAILED UPDATE CUSTOMER INFORMATION !');
             window.location = './customerProfile.php?custID=".$_SESSION['custID']."';</script>";
     }
 
@@ -32,7 +32,7 @@ class manageUserProfileController{
         $user = new manageUserProfileModel();
         $user->custID = $custID;
         if($user->deleteCustomer()){
-            $message = "Success Delete!";
+            $message = "CUSTOMER ACCOUNT SUCCESSFULLY DELETED !";
 			echo "<script type='text/javascript'>alert('$message');
 			window.location = '../../ApplicationLayer/manageLoginAndRegister/userLogin.php';</script>";
         }
@@ -58,11 +58,11 @@ class manageUserProfileController{
         $user->spbanktype = $_POST['spbanktype'];
         $user->spbankaccountnumber = $_POST['spbankaccountnumber'];
         if($user->updateServiceProvider()){
-            echo "<script type='text/javascript'>alert('Your profile are success Update!!!');
+            echo "<script type='text/javascript'>alert('SUCCESSFULLY UPDATE SERVICE PROVIDER INFORMATION !');
             window.location = './serviceproviderProfile.php?spID=".$_SESSION['spID']."';</script>";
         }
         else
-            echo "<script type='text/javascript'>alert('Your profile are failed Update!!!');
+            echo "<script type='text/javascript'>alert('FAILED UPDATE SERVICE PROVIDER INFORMATION !');
             window.location = './serviceproviderProfile.php?spID=".$_SESSION['spID']."';</script>";
     }
     
@@ -70,7 +70,7 @@ class manageUserProfileController{
         $user = new manageUserProfileModel();
         $user->spID = $spID;
         if($user->deleteServiceProvider()){
-            $message = "Success Delete!";
+            $message = "SERVICE PROVIDER ACCOUNT SUCCESSFULLY DELETED !";
 			echo "<script type='text/javascript'>alert('$message');
 			window.location = '../../ApplicationLayer/manageLoginAndRegister/userLogin.php';</script>";
         }
@@ -94,11 +94,11 @@ class manageUserProfileController{
         $user->runnerbanktype = $_POST['runnerbanktype'];
         $user->runnerbankaccountnumber = $_POST['runnerbankaccountnumber'];
         if($user->updateRunner()){
-            echo "<script type='text/javascript'>alert('Your profile are success Update!!!');
+            echo "<script type='text/javascript'>alert('SUCCESSFULLY UPDATE RUNNER INFORMATION !');
             window.location = './runnerProfile.php?runnerID=".$_SESSION['runnerID']."';</script>";
         }
         else
-            echo "<script type='text/javascript'>alert('Your profile are failed Update!!!');
+            echo "<script type='text/javascript'>alert('FAILED UPDATE RUNNER INFORMATION !');
             window.location = './runnerProfile.php?runnerID=".$_SESSION['runnerID']."';</script>";
     }
     
@@ -106,7 +106,7 @@ class manageUserProfileController{
         $user = new manageUserProfileModel();
         $user->runnerID = $runnerID;
         if($user->deleteRunner()){
-            $message = "Success Delete!";
+            $message = "RUNNER ACCOUNT SUCCESSFULLY DELETED !";
 			echo "<script type='text/javascript'>alert('$message');
 			window.location = '../../ApplicationLayer/manageLoginAndRegister/userLogin.php';</script>";
         }

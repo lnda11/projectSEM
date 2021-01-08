@@ -12,9 +12,10 @@ class manageLoginAndRegisterController{
         $user->custaddress2 = $_POST['custaddress2'];
         $user->custaddress3 = $_POST['custaddress3'];
         $user->custaddress4 = $_POST['custaddress4'];
+		$user->custimage = $_FILES["custimage"]["name"];
         $user->custpassword = $_POST['custpassword'];
         if($user->customerRegister() > 0){
-            $message = "Your registration is SUCCESSFULLY!";
+            $message = "CUSTOMER ACCOUNT REGISTERED SUCCESSFULLY!";
 		    echo "<script type='text/javascript'>alert('$message');
 		    window.location = 'customerLogin.php';</script>";
         }
@@ -53,9 +54,10 @@ class manageLoginAndRegisterController{
         $user->spaddress4 = $_POST['spaddress4'];
         $user->spbanktype = $_POST['spbanktype'];
         $user->spbankaccountnumber = $_POST['spbankaccountnumber'];
+		$user->spimage = $_FILES["spimage"]["name"];
         $user->sppassword = $_POST['sppassword'];
         if($user->serviceproviderRegister() > 0){
-            $message = "Your registration is SUCCESSFULLY!";
+            $message = "SERVICE PROVIDER ACCOUNT REGISTERED SUCCESSFULLY!";
 		    echo "<script type='text/javascript'>alert('$message');
 		    window.location = 'serviceproviderLogin.php';</script>";
         }
@@ -92,9 +94,10 @@ class manageLoginAndRegisterController{
         $user->runnercity = $_POST['runnercity'];
         $user->runnerbanktype = $_POST['runnerbanktype'];
         $user->runnerbankaccountnumber = $_POST['runnerbankaccountnumber'];
+		$user->runnerimage = $_FILES["runnerimage"]["name"];
         $user->runnerpassword = $_POST['runnerpassword'];
         if($user->runnerRegister() > 0){
-            $message = "Your registration is SUCCESSFULLY!";
+            $message = "RUNNER ACCOUNT REGISTERED SUCCESSFULLY!";
 		    echo "<script type='text/javascript'>alert('$message');
 		    window.location = 'runnerLogin.php';</script>";
         }
