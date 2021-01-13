@@ -47,6 +47,10 @@
                 <a href="../manageUserProfile/serviceProviderProfile.php?spID=<?=$_SESSION['spID']?>"><i class="fa fa-user" aria-hidden="true" style="font-size: 50px; padding-right: 5px; padding-left: 5px; padding-top: 22%; padding-bottom: 22%;"></i></a>
             </div>
         </div>
+
+
+    <?php include ('../../ApplicationLayer/manageService/ExternalCSS/servicenav.html');?>
+    
         <center>
         <h3 style="margin-left: 1em; margin-top: 1em; text-decoration: underline;">Service Provider Service Add</h3>
         <br><br>
