@@ -49,6 +49,7 @@
         </style>
     </head>
     <body>
+
         <div class="topnav">
             <a href="./serviceProviderServiceView.php?spID=<?=$_SESSION['spID']?>"><img src="Image/largerlogo.png" width="110px" height="70px"><label style="font-size: 120%; padding-right: 5px;">Homepage</label></a>
             
@@ -57,10 +58,16 @@
             </div>
         </div>
 
+
+
         <div class="logout"><a href="../manageLoginAndRegister/userLogin.php">Logout</a></div>
+
+    <?php include ('../../ApplicationLayer/manageService/ExternalCSS/servicenav.html');?>
+
         <center>
-        <h3 style="margin-left: 1em; margin-top: 1em; text-decoration: underline;">Service Provider Service View</h3>
+        <h3 style="margin-left: 1em; margin-top: 1em; text-decoration: underline; ">Service Provider Service View</h3>
         <br><br>
+
 
             <div style="margin-left: 1.5em;">
                 Do you want to add Service? &emsp; <a href="./serviceProviderServiceAdd.php?spID=<?=$_SESSION['spID']?>">Click Here</a>
