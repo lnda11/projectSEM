@@ -3,7 +3,7 @@ require_once '../../libs/database.php';
 session_start();
 
 class manageUserProfileModel{
-    public $custID, $custusername, $custhpnumber, $custemail, $custaddress1, $custaddress2, $custaddress3, $custaddress4, $custimage;
+    public $custID, $custusername, $custhpnumber, $custemail, $custaddress1, $custaddress2, $custaddress3, $custaddress4;
     public $spID, $spusername, $sphpnumber, $spemail, $spcompanyname, $spaddress1, $spaddress2, $spaddress3, $spaddress4, $spbanktype, $spbankaccountnumber;
     public $runnerID, $runnerusername, $runnerhpnumber, $runneremail, $runnervehiclemodel, $runnervehicleplatenumber, $runnercity, $runnerbanktype, $runnerbankaccountnumber;
     

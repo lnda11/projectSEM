@@ -9,7 +9,7 @@ if(isset($_POST['register'])){
 <!DOCTYPE html>
 <html>
     <head>
-        <title>RUNNER REGISTRATION</title>
+        <title>Runner Register</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="ExternalCSS/logo.css">
@@ -19,12 +19,12 @@ if(isset($_POST['register'])){
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <style>
             p {
-                font-size: 25px;
+                font-size: 20px;
                 text-align: center;
             } 
 
             .registerbtn {
-                background-color: rgb(36, 160, 237);
+                background-color: rgb(140, 140, 175);
                 color: white;
                 padding: 10px 10px;
                 margin: 8px 0;
@@ -73,16 +73,15 @@ if(isset($_POST['register'])){
 
     <body>
         <div class="header">
-            <a href="userRegister.php"><img src="Image/logobaru.png" alt="Logo" height="300px" width="350px"></a>
-            <body style="background-color:powderblue;">
-			<hr style="border: 2px solid #4682BF; width:70%;">
+            <a href="userRegister.php"><img src="Image/logo.jpg" alt="Logo" height="250px"></a>
+            <br><label style="font-size: 25px;">Beep Beep</label>
         </div>
 
         <br>
-        <p><strong>RUNNER REGISTRATION</strong></p>
+        <p><strong>Register as Runner</strong>:</p>
         <br>
 
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="" method="POST">
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-4">
                     <div class="input-group">
@@ -101,12 +100,12 @@ if(isset($_POST['register'])){
                     </div>
                     <br>
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-motorcycle" aria-hidden="true" style="font-size: large;"></i></span>
+                        <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true" style="font-size: large;"></i></span>
                         <input type="text" class="form-control form-control input-lg" name="runnervehiclemodel" placeholder="Vehicle Model" required>
                     </div>
                     <br>
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-motorcycle" aria-hidden="true" style="font-size: large;"></i></span>
+                        <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true" style="font-size: large;"></i></span>
                         <input type="text" class="form-control form-control input-lg" name="runnervehicleplatenumber" placeholder="Vehicle Plate Number" required>
                     </div>
                     <br>
@@ -116,61 +115,29 @@ if(isset($_POST['register'])){
                     </div>
                     <br>
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-money-check-alt" aria-hidden="true" style="font-size: large;"></i></span>
+                        <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true" style="font-size: large;"></i></span>
                         <input type="text" class="form-control form-control input-lg" name="runnerbanktype" placeholder="Bank Type" required>
                     </div>
                     <br>
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-money-check-alt" aria-hidden="true" style="font-size: large;"></i></span>
+                        <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true" style="font-size: large;"></i></span>
                         <input type="text" class="form-control form-control input-lg" name="runnerbankaccountnumber" placeholder="Bank Account Number" required>
                     </div>
                     <br>
-					<div class="form-group"> 
-						<div class="input-group-addon">
-							<i class="fa fa-map-image" aria-hidden="true" style="font-size: large;"></i>
-							<label for="pwd" align="center">UPLOAD YOUR PHOTO</label>
-							<input type="file" class="form-control"  name="runnerimage"></input>
-						</div>
-					</div>
-					<br>
-					
                     <div class="input-group">         
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true" style="font-size: larger;"></i></span>
                         <input type="password" class="form-control form-control input-lg" name="runnerpassword" id="password" placeholder="Password" required>
                     </div>
                     <div class="showPwd"><input type="checkbox" onclick="showPassword()">&nbsp;Show Password</div>
                         <br>
-                        <button type="submit" name="register" class="registerbtn"><label style="font-size: larger;">REGISTER</label></button>
+                        <button type="submit" name="register" class="registerbtn"><label style="font-size: larger;">Register</label></button>
                     </div>  
                 </div>
             </div>
         </form>
         <br>
         <div style="text-align: center; font-size: medium;">
-            ALREADY HAVE AN ACCOUNT? <a class="login" href="./runnerLogin.php"><u>LOGIN HERE</u></a>.
+            Already have an account? <a class="login" href="./runnerLogin.php"><u>Login here</u></a>.
         </div>
     </body>
-<?php
-if(isset($_POST["register"]))
-{	
-	$tm=md5(time());
-	$target_dir="Image/";
-	$target_file=$target_dir . basename($_FILES["runnerimage"]["name"]);
-	//$dst1="ApplicationLayer/manageLoginAndRegister/Image/".$tm.$fnm;
-	//$dst="./custimage/".$tm.$fnm;
-	//$dst1="/custimage/".$tm.$fnm;
-	move_uploaded_file($_FILES["runnerimage"]["tmp_name"],$target_file);
-
-	mysqli_query($link,"insert into customtable values (NULL,'$_POST[custusername]','$_POST[custhpnumber]','$_POST[custemail]','$_POST[custaddress1]','$_POST[custaddress2]','$_POST[custaddress3]','$_POST[custaddress4]','$dst1','$_POST[custpassword]')");
-	
-	?>
-	<script type = "text/javascript">
-	window.location.href='runnerLogin.php';
-	</script>
-	<?php
-	
-}
-
-?>
-</html>
 </html>

@@ -9,7 +9,7 @@ if(isset($_POST['login'])){
 <!DOCTYPE html>
 <html>
     <head>
-        <title>RUNNER LOGIN</title>
+        <title>Runner Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="ExternalCSS/logo.css">
@@ -19,12 +19,12 @@ if(isset($_POST['login'])){
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <style>
             p {
-                font-size: 35px;
+                font-size: 20px;
                 text-align: center;
             } 
 
             .loginBtn {
-                background-color: rgb(36, 160, 237);
+                background-color: rgb(140, 140, 175);
                 color: white;
                 padding: 10px 10px;
                 margin: 8px 0;
@@ -73,13 +73,12 @@ if(isset($_POST['login'])){
 
     <body>
         <div class="header">
-            <a href="userLogin.php"><img src="Image/logobaru.png" alt="Logo" height="300px" width="350px"></a>
-             <body style="background-color:powderblue;">
-			<hr style="border: 2px solid #4682BF; width:70%;">
+            <a href="userLogin.php"><img src="Image/logo.jpg" alt="Logo" height="250px"></a>
+            <br><label style="font-size: 25px;">Beep Beep</label>
         </div>
 
         <br>
-        <p><strong>RUNNER LOGIN</strong></p>
+        <p><strong>Login as Runner</strong>:</p>
         <br>
 
         <form action="" method="POST">
@@ -96,13 +95,13 @@ if(isset($_POST['login'])){
                     </div>
                     <div class="showPwd"><input type="checkbox" onclick="showPassword()">&nbsp;Show Password</div>
                     <br>
-                    <button type="submit" name="login" class="loginBtn"><label style="font-size: larger;">LOGIN</label></button>
+                    <button type="submit" name="login" class="loginBtn"><label style="font-size: larger;">Log In</label></button>
                 </div>  
             </div>
         </form>
         <br>
-        <div style="text-align: center; font-size: large;">
-             DON'T HAVE AN ACCOUNT? <a class="register" href="./runnerRegister.php"><u>REGISTER HERE</u></a>.
+        <div style="text-align: center; font-size: medium;">
+            Don't have an account? <a class="register" href="./runnerRegister.php"><u>Register here</u></a>.
         </div>
     </body>
 </html>
